@@ -1,0 +1,26 @@
+<div class="container" fxlex>
+    <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+        <mat-card fxFlex>
+            <mat-form-field id="title-bar" appearance="outline" color="primary">
+                <mat-label>Game Title</mat-label>
+                <input matInput type="text" name="title" [ngModel]="post?.title" minlength="3" required #title="ngModel" />
+                <mat-error *ngIf="title.invalid">Please enter a Game Title</mat-error>
+            </mat-form-field>
+
+            <mat-form-field id="title-bar" appearance="outline" color="primary">
+                <mat-label>Game Rating</mat-label>
+                <input matInput type="text" name="rating" [ngModel]="post?.rating" required #title="ngModel" />
+                <mat-error *ngIf="title.invalid">Please give your rating</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" color="primary">
+                <textarea matInput rows="6" name="content" [ngModel]="post?.content" required #content="ngModel"></textarea>
+                <mat-error *ngIf="content.invalid">Please enter a Game Review</mat-error>
+                <mat-label>Write your review</mat-label>
+                <button mat-raised-button color="primary" type="button" type="submit">
+          Save Post
+        </button>
+            </mat-form-field>
+        </mat-card>
+        <hr />
+    </form>
+</div>

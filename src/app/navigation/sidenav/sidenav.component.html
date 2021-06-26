@@ -1,0 +1,33 @@
+<mat-nav-list class="site-nav" fxFlex fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px" style="margin-left: 16px; color: black" style="margin-top: 20px !important; margin-left: 20px !important">
+    <button class="site-nav" mat-icon-button routerLink="/" (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">home</mat-icon>
+    Home
+  </button>
+    <button class="site-nav" mat-icon-button routerLink="/home" (click)="_authService.notLogged()" routerLink="/home" (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">data_exploration</mat-icon>Our
+    Database
+  </button>
+    <button class="site-nav" mat-icon-button routerLink="/postcreate" (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">rate_review</mat-icon>Create
+    Review
+  </button>
+
+    <button class="site-nav" mat-icon-button routerLink="/postlist" (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">reviews</mat-icon>Reviews
+  </button>
+
+    <button class="site-nav" mat-icon-button routerLink="/login" (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">login</mat-icon>Login
+  </button>
+    <button class="site-nav" mat-icon-button routerLink="/register" (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">account_box</mat-icon>Signup
+  </button>
+
+    <button class="site-nav" mat-icon-button (click)="onLogout()" (click)="onClose()" (click)="_authService.logoutUser()">
+    <mat-icon class="nav-icon" color="primary">logout</mat-icon>Logout
+  </button>
+    <button class="site-nav" mat-icon-button (click)="onClose()">
+    <mat-icon class="nav-icon" color="primary">keyboard_arrow_left</mat-icon
+    >Close
+  </button>
+</mat-nav-list>

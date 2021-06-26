@@ -1,0 +1,5 @@
+<div class="search-bar" fxFlex fxLayout fxLayoutAlign="flex-end end">
+    <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <input class="search-input" matInput name="search" ngModel placeholder="Search" />
+    </form>
+</div>
