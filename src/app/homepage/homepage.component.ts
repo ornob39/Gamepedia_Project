@@ -73,8 +73,7 @@ export class HomepageComponent implements OnInit {
   ];
 
   //Navigate to details
-   openGameDetails(id: string) {
+  openGameDetails(id: string) {
     this.router.navigate(['details', id]);
-    console.log('clicked');
   }
 }

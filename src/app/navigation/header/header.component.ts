@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { NgForm,FormGroup } from '@angular/forms';
+import { NgForm, FormGroup } from '@angular/forms';
 
 import { Router } from '@angular/router';
 import { HomeComponent } from 'src/app/components/home/home.component';
@@ -23,13 +23,11 @@ export class HeaderComponent implements OnInit {
   onToggleSidenav() {
     this.sidenavToggle.emit();
   }
- onSubmit(form: NgForm) {
+  onSubmit(form: NgForm) {
     this.router.navigate(['search', form.value.search]);
-    console.log('Submitted'+form.value.search)
   }
-  onClickSearch(form: NgForm){
-    this.router.navigate(['search',form.value.search]);
-    console.log('clicked'+form.value.search)
+  onClickSearch(form: NgForm) {
+    this.router.navigate(['search', form.value.search]);
   }
 
   onLogout() {
