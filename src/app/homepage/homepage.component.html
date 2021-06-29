@@ -1,13 +1,22 @@
-<div class="jumbotron">
-    <h1 class="display-4">Gamepedia</h1>
-    <h1 class="display-4">Your Home of All Favorite Games</h1>
-    <p class="lead">
-        Search games from our database, watch trailers, find screenshots and get the metacritic rating all in from one page
-    </p>
-    <hr class="my-4" />
-
-    <a class="btn btn-primary btn-lg" routerLink="/register" role="button">Get Started by Signing up</a
-  >
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1 class="display-4">Gamepedia</h1>
+        <h1 class="display-4">Your Home of All Favorite Games</h1>
+        <p class="lead">
+            Search games from our database, watch trailers, find screenshots and get the metacritic rating all in from one page
+        </p>
+        <p class="lead">Have a favorite game? Write a review to share it!</p>
+        <hr class="my-4" />
+        <div class="col">
+            <a class="btn btn-primary btn-lg" routerLink="/register" role="button">Get Started by Signing up</a
+      >
+    </div>
+    <div class="col" style="margin-top: 16px">
+      <a class="btn btn-primary btn-md" routerLink="/login" role="button"
+        >Already Have an Account? Log in</a
+      >
+    </div>
+  </div>
 </div>
 
 <div class="container">
@@ -59,14 +68,12 @@
                     fxLayoutAlign="end end"
                     class="footer-btn"
                     mat-raised-button
-                    style="background-color: #ffffff00"
+                    style="
+                      background-color: #ffffff00;
+                      text-transform: uppercase;
+                    "
                   >
-                    <p
-                      class="card-paragraph"
-                      style="text-transform: uppercase; margin: auto"
-                    >
-                      {{ new_titles[i] }}
-                    </p>
+                    {{ new_titles[i] }}
                   </button>
                 </mat-card-footer>
                 <mat-card-footer
@@ -148,14 +155,13 @@
                 fxLayoutAlign="center center"
                 class="footer-btn"
                 mat-raised-button
-                style="background-color: #ffffff00"
+                style="
+                  background-color: #ffffff00;
+                  text-transform: uppercase;
+                  margin: auto;
+                "
               >
-                <p
-                  class="card-paragraph"
-                  style="text-transform: uppercase; margin: auto"
-                >
-                  {{ best_titles[i] }}
-                </p>
+                {{ best_titles[i] }}
               </button>
             </mat-card-footer>
             <mat-card-footer
@@ -235,14 +241,13 @@
                 fxLayoutAlign="center center"
                 class="footer-btn"
                 mat-raised-button
-                style="background-color: #ffffff00"
+                style="
+                  background-color: #ffffff00;
+                  text-transform: uppercase;
+                  margin: auto;
+                "
               >
-                <p
-                  class="card-paragraph"
-                  style="text-transform: uppercase; margin: auto"
-                >
-                  {{ top10_titles[i] }}
-                </p>
+                {{ top10_titles[i] }}
               </button>
             </mat-card-footer>
             <mat-card-footer
@@ -263,7 +268,11 @@
               >
                 <p
                   class="card-paragraph"
-                  style="text-transform: uppercase; margin: auto"
+                  style="
+                    text-transform: uppercase;
+                    margin: auto;
+                    background-color: rgba(255, 255, 255, 0);
+                  "
                 >
                   Show Details
                 </p>
@@ -274,4 +283,17 @@
       </mat-card-content>
     </mat-card>
   </div>
+</div>
+<div class="container-fluid" style="margin-top: 60px; margin-bottom: 16px">
+  <footer
+    class="text-center text-lg-start bg-light text-muted"
+    style="border-radius: 10px"
+  >
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.829)">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://gamepedia-1.herokuapp.com/"
+        >Gamepedia</a
+      >
+    </div>
+  </footer>
 </div>

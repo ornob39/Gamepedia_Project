@@ -21,9 +21,17 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
-  { path: 'postcreate', component: PostCreateComponent },
-  { path: 'postlist', component: PostListComponent },
-  { path: 'edit/:postId', component: PostCreateComponent },
+  {
+    path: 'postcreate',
+    component: PostCreateComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'postlist', component: PostListComponent, canActivate: [AuthGuard] },
+  {
+    path: 'edit/:postId',
+    component: PostCreateComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

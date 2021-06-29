@@ -56,14 +56,6 @@ export class AuthService {
     }
   }
 
-  wrongPassword() {
-    if (!!localStorage.getItem('token') == false) {
-      this._snackBar.open('Wrong Credentials', 'Clear', {
-        duration: 3000,
-      });
-    }
-  }
-
   getToken() {
     return localStorage.getItem('token');
   }

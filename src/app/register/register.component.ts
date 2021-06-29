@@ -22,12 +22,11 @@ export class RegisterComponent implements OnInit {
   registerUser() {
     this._auth.registerUser(this.registeredUserData).subscribe(
       (res) => {
-
         localStorage.setItem('token', res.token);
         this._snackBar.open('Signup Successful!', 'Clear', { duration: 3000 });
         this._router.navigate(['/home']);
       },
-      (err) => console.log(err)
+      (err) => {}
     );
   }
 

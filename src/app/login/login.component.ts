@@ -23,13 +23,13 @@ export class LoginComponent implements OnInit {
   loginUser() {
     this._auth.loginUser(this.loginUserData).subscribe(
       (res) => {
-
         localStorage.setItem('token', res.token);
         this._snackBar.open('Login Successful!', 'Clear', { duration: 3000 });
         this._router.navigate(['/home']);
       },
-      (err) => console.error(err)
+      (err) => {}
     );
   }
+
   onSubmit(form: NgForm) {}
 }
